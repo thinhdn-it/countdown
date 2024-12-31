@@ -55,35 +55,31 @@ const Home = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white relative">
-            <h1 className="text-4xl font-bold mb-8 text-shadow">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white text-center">
+            <h1 className="text-4xl font-bold mb-8">
                 {isFinished ? "Happy New Year 2025!" : "Countdown to New Year 2025!"}
             </h1>
 
             {!isFinished && (
                 <div className="flex gap-4 text-center mb-8">
-                    {/* Hiển thị ngày nếu lớn hơn 0 */}
                     {timeLeft.days > 0 && (
                         <div className="countdown-number">
                             <p className={getCountdownStyle()}>{timeLeft.days}</p>
                             <p className="text-xl">Days</p>
                         </div>
                     )}
-                    {/* Hiển thị giờ nếu giờ > 0 */}
                     {(timeLeft.days > 0 || timeLeft.hours > 0) && (
                         <div className="countdown-number">
                             <p className={getCountdownStyle()}>{timeLeft.hours}</p>
                             <p className="text-xl">Hours</p>
                         </div>
                     )}
-                    {/* Hiển thị phút nếu phút > 0 */}
                     {(timeLeft.days > 0 || timeLeft.hours > 0 || timeLeft.minutes > 0) && (
                         <div className="countdown-number">
                             <p className={getCountdownStyle()}>{timeLeft.minutes}</p>
                             <p className="text-xl">Minutes</p>
                         </div>
                     )}
-                    {/* Luôn hiển thị giây */}
                     <div className="countdown-number">
                         <p className={getCountdownStyle()}>{timeLeft.seconds}</p>
                         <p className="text-xl">Seconds</p>
