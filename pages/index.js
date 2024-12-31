@@ -4,7 +4,7 @@ import { useWindowSize } from "react-use";
 import { FaVolumeUp, FaVolumeMute } from "react-icons/fa"; // Import FontAwesome icons
 
 const Home = () => {
-    const targetDate = new Date("2024-12-31T23:59:59"); 
+    const targetDate = new Date("2024-12-31T23:59:59");
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
     const [isFinished, setIsFinished] = useState(false);
     const [isMuted, setIsMuted] = useState(true); // Bắt đầu với âm thanh bị tắt
@@ -68,33 +68,33 @@ const Home = () => {
         >
             <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-lg"></div> {/* Blur overlay */}
 
-            <h1 className="text-4xl font-bold mb-8 text-shadow z-10">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-shadow z-10">
                 {isFinished ? "Happy New Year 2025!" : "Countdown to New Year 2025!"}
             </h1>
 
             {!isFinished && (
-                <div className="flex gap-8 text-center mb-8 z-10"> {/* Tăng khoảng cách giữa các phần tử */}
+                <div className="flex flex-wrap gap-4 sm:gap-8 text-center mb-8 z-10 justify-center"> {/* Tăng khoảng cách giữa các phần tử */}
                     {timeLeft.days > 0 && (
                         <div className="countdown-number">
-                            <p className="text-8xl font-extrabold">{timeLeft.days}</p>
-                            <p className="text-xl">Days</p>
+                            <p className="text-4xl sm:text-6xl md:text-7xl font-extrabold">{timeLeft.days}</p>
+                            <p className="text-lg sm:text-xl">Days</p>
                         </div>
                     )}
                     {(timeLeft.days > 0 || timeLeft.hours > 0) && (
                         <div className="countdown-number">
-                            <p className="text-8xl font-extrabold">{timeLeft.hours}</p>
-                            <p className="text-xl">Hours</p>
+                            <p className="text-4xl sm:text-6xl md:text-7xl font-extrabold">{timeLeft.hours}</p>
+                            <p className="text-lg sm:text-xl">Hours</p>
                         </div>
                     )}
                     {(timeLeft.days > 0 || timeLeft.hours > 0 || timeLeft.minutes > 0) && (
                         <div className="countdown-number">
-                            <p className="text-8xl font-extrabold">{timeLeft.minutes}</p>
-                            <p className="text-xl">Minutes</p>
+                            <p className="text-4xl sm:text-6xl md:text-7xl font-extrabold">{timeLeft.minutes}</p>
+                            <p className="text-lg sm:text-xl">Minutes</p>
                         </div>
                     )}
                     <div className="countdown-number">
-                        <p className="text-8xl font-extrabold">{timeLeft.seconds}</p>
-                        <p className="text-xl">Seconds</p>
+                        <p className="text-4xl sm:text-6xl md:text-7xl font-extrabold">{timeLeft.seconds}</p>
+                        <p className="text-lg sm:text-xl">Seconds</p>
                     </div>
                 </div>
             )}
