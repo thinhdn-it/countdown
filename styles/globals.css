@@ -1,41 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 /* Gradient background animation */
 @keyframes gradientAnimation {
-    0% {
-      background-color: #ff7e5f;
-    }
-    50% {
-      background-color: #feb47b;
-    }
-    100% {
-      background-color: #ff7e5f;
-    }
+  0% {
+    background-color: #ff7e5f;
   }
-  
-  body {
-    animation: gradientAnimation 10s infinite alternate;
+
+  50% {
+    background-color: #feb47b;
   }
-  
-  /* Glowing text effect */
-  .text-shadow {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+
+  100% {
+    background-color: #ff7e5f;
   }
-  
-  /* Countdown number animation */
-  @keyframes countDownAnim {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
+}
+
+body {
+  animation: gradientAnimation 10s infinite alternate;
+}
+
+/* Glowing text effect */
+.text-shadow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Countdown number animation */
+@keyframes countDownAnim {
+  0% {
+    transform: scale(1);
   }
-  
-  .countdown-number {
-    animation: countDownAnim 1s ease-in-out infinite;
+
+  50% {
+    transform: scale(1.2);
   }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.countdown-number {
+  animation: countDownAnim 1s ease-in-out infinite;
+}
+
+
+/*=====================*/
