@@ -156,6 +156,7 @@
   color: #333333;
   cursor: pointer;
   padding: 3px;
+  height: 72px;
   width: 14.286%;
   background-color: #ffe0b2;
   border-radius: 4px;
@@ -178,7 +179,7 @@
 }
 
 .amlich .tet {
-  background-color: #fbc02d;
+  background-color: #ffcc80;
   color: #000000;
   border-radius: 6px;
 }
@@ -200,7 +201,7 @@
 }
 
 .amlich .leduong {
-  background-color: #fff3e0;
+  background-color: #ffcc80;
   color: #333333;
   border-radius: 6px;
 }
@@ -232,4 +233,11 @@
   font-weight: bold;
   text-align: left;
   color: #d32f2f;
+}
+
+.amlich .ctitle{
+  text-align: center;
+  font-size: 75%;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
 }
