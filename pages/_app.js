@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import '../styles/globals.css';
+import '../public/css/jquery.amlich.css'; 
 
 export default function MyApp({ Component, pageProps }) {
   return (

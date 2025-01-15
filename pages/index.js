@@ -107,7 +107,7 @@ const Home = () => {
                 <AudioControl isMuted={isMuted} toggleMute={toggleMute} />
             </div>
             <Link
-                href="/calendar"
+                href="/lich"
                 className="absolute top-4 right-4 font-bold text-xl px-6 py-3 bg-orange-400 rounded-lg shadow-md hover:bg-orange-500 transition duration-200 z-30"
             >
                 Lịch
